@@ -1,0 +1,207 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(300deg, #0b38a1, #010511); /* Match the home page background */
+  text-align: center;
+  padding: 2rem;
+  overflow: hidden; /* Add overflow hidden to match home page */
+  position: relative;
+  z-index: 1;
+  padding-top: 15vh; /* Adjust the padding to account for the fixed navbar */
+}
+
+.skills h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.skills-section {
+  margin-bottom: 2rem;
+}
+
+.skills-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.skill-item {
+  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.skill-item:hover {
+  cursor: pointer;
+}
+
+.skill-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #0b38a1;
+}
+
+.skill-item h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.skill-item p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+.moving-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  animation: moveStars 20s linear infinite;
+  z-index: 0;
+}
+
+.bottom-moving-stars {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  animation: moveStars 40s linear infinite;
+  z-index: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+@keyframes moveStars {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-25%, -25%);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+  }
+  50% {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #a1c4fd 50%, #c2e9fb 50%);
+  }
+  100% {
+    transform: scale(1);
+    background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .skills h1 {
+    font-size: 2.25rem;
+  }
+
+  .skills-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .skill-item {
+    max-width: 200px;
+    padding: 1.25rem;
+  }
+
+  .skill-icon {
+    font-size: 2.5rem;
+  }
+
+  .skill-item h2 {
+    font-size: 1.25rem;
+  }
+
+  .skill-item p {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills h1 {
+    font-size: 2rem;
+  }
+
+  .skills-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .skill-item {
+    max-width: 150px;
+    padding: 1rem;
+  }
+
+  .skill-icon {
+    font-size: 2rem;
+  }
+
+  .skill-item h2 {
+    font-size: 1rem;
+  }
+
+  .skill-item p {
+    font-size: 0.875rem;
+  }
+
+  .skills {
+    padding-top: 20vh; /* Increase padding for smaller screens */
+  }
+}
+
+@media (max-width: 375px) {
+  .skills h1 {
+    font-size: 1.75rem;
+  }
+
+  .skills-section h2 {
+    font-size: 1.25rem;
+  }
+
+  .skill-item {
+    max-width: 120px;
+    padding: 0.75rem;
+  }
+
+  .skill-icon {
+    font-size: 1.75rem;
+  }
+
+  .skill-item h2 {
+    font-size: 0.875rem;
+  }
+
+  .skill-item p {
+    font-size: 0.75rem;
+  }
+}

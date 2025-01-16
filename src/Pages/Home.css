@@ -1,0 +1,171 @@
+.home {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(300deg, #0b38a1, #010511);
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+  padding-top: 10vh; /* Adjust the padding to account for the fixed navbar */
+}
+
+.home-right {
+  width: 50%;
+  color: white;
+  align-items: baseline;
+  padding: 2rem;
+  opacity: 0;
+  animation: fadeIn 10s forwards;
+}
+
+.home-left {
+  width: 50%;
+  color: white;
+  align-items: baseline;
+  padding: 2rem;
+  opacity: 0;
+  animation: fadeIn 6s forwards;
+}
+
+.home-left h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: -10rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.home-left p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  text-align: center;
+  justify-content: safe;
+  text-decoration: solid;
+  margin-top: 5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.home-left h1:hover,
+.home-left p:hover {
+  color: rgb(209, 200, 187);
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.home-right img {
+  width: 200%;
+  max-width: 400px;
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgba(0, 198, 255, 0.8);
+}
+
+.home-right {
+  width: 20%;
+  border-radius: 80%;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-right img:hover {
+  transform: scale(1.3);
+  opacity: 1;
+  box-shadow: 0 0 40px rgba(0, 198, 255, 0.9);
+}
+
+@keyframes moveStars {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-25%, -25%);
+  }
+}
+
+.moving-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  animation: moveStars 20s linear infinite;
+  z-index: 0;
+}
+
+.bottom-moving-stars {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  animation: moveStars 40s linear infinite;
+  z-index: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .home-left h1 {
+    font-size: 2.25rem;
+  }
+
+  .home-left p {
+    font-size: 1.25rem;
+  }
+
+  .home-right img {
+    width: 70%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    padding: 1rem;
+    padding-top: 20vh; /* Increase padding for smaller screens */
+  }
+
+  .home-left,
+  .home-right {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .home-left h1 {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+
+  .home-left p {
+    font-size: 1.2rem;
+  }
+
+  .home-right img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 375px) {
+  .home-left h1 {
+    font-size: 1.75rem;
+  }
+
+  .home-left p {
+    font-size: 1rem;
+  }
+
+  .home-right img {
+    width: 100%;
+    max-width: 250px;
+  }
+}

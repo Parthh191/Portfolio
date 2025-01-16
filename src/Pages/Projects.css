@@ -1,0 +1,160 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(300deg, #0b38a1, #010511);
+  text-align: center;
+  padding: 2rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  padding-top: 15vh; /* Adjust the padding to account for the fixed navbar */
+}
+
+.projects h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.projects-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.project-item {
+  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  background: linear-gradient(500deg, #1d3d72 0%, #04e6da 100%);
+  position: relative;
+  color: #fff;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 0 0 100px #00c6ff;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.project-item h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color:#fff;
+}
+
+.project-item p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color:#fff;
+}
+
+.moving-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  animation: moveStars 20s linear infinite;
+  z-index: 0;
+}
+
+.bottom-moving-stars {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  animation: moveStars 40s linear infinite;
+  z-index: 0;
+}
+
+@keyframes moveStars {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-25%, -25%);
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .projects h1 {
+    font-size: 2.25rem;
+  }
+
+  .project-item {
+    max-width: 250px;
+    padding: 1.25rem;
+  }
+
+  .project-item h3 {
+    font-size: 1.75rem;
+  }
+
+  .project-item p {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects h1 {
+    font-size: 2rem;
+  }
+
+  .project-item {
+    max-width: 150px;
+    padding: 1rem;
+  }
+
+  .project-item h3 {
+    font-size: 1rem;
+  }
+
+  .project-item p {
+    font-size: 0.875rem;
+  }
+
+  .projects {
+    padding-top: 20vh; /* Increase padding for smaller screens */
+  }
+}
+
+@media (max-width: 375px) {
+  .projects h1 {
+    font-size: 1.75rem;
+  }
+
+  .project-item {
+    max-width: 120px;
+    padding: 0.75rem;
+  }
+
+  .project-item h3 {
+    font-size: 0.875rem;
+  }
+
+  .project-item p {
+    font-size: 0.75rem;
+  }
+}
